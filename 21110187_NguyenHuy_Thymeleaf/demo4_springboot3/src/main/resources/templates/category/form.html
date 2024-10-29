@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thêm/Sửa Category</title>
+</head>
+<body>
+<h1>Thêm hoặc Sửa Category</h1>
+<form th:action="@{/categories}" th:object="${category}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <label for="name">Name:</label>
+    <input type="text" id="name" th:field="*{name}" required/>
+    <label for="description">Description:</label>
+    <input type="text" id="description" th:field="*{description}" required/>
+    <button type="submit">Lưu</button>
+</form>
+
+<footer>
+    <p>ID: 21110187</p>
+    <p>Name: NguyenHuy</p>
+</footer>
+
+</body>
+</html>
